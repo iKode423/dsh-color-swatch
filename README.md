@@ -1,6 +1,7 @@
 # 对话颜色色点 · Color Swatch Dots
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+[![GitHub](https://img.shields.io/badge/GitHub-iKode423%2Fdsh--color--swatch-181717?logo=github)](https://github.com/iKode423/dsh-color-swatch)
 
 为 DeepSeek Harness Web UI 的对话加一层颜色提示：消息里的颜色值前面会出现一颗对应颜色的圆点。把鼠标移到圆点上，即可查看并复制它的 HEX、RGB、HSL 与 CSS 名称写法。
 
@@ -68,13 +69,40 @@
       name: '@local/color-swatch'
 ```
 
-推荐流程：
+### 通过 GitHub 安装（推荐）
 
-1. 打开 Harness 的「插件」页，从本地目录安装本包。
-2. 确认插件列表里出现「对话颜色色点 / Color Swatch Dots」。
-3. 刷新页面，在对话里发送一条包含内联颜色代码的消息即可看到效果。
+1. 打开 Harness 侧边栏的「插件」页，在安装输入框中填入仓库地址：
 
-手动方式（开发时常用）：
+   ```text
+   https://github.com/iKode423/dsh-color-swatch
+   ```
+
+   也可以使用 pnpm 的 GitHub 简写：`github:iKode423/dsh-color-swatch`。
+
+2. 确认安装。Harness 会通过 pnpm 直接从 GitHub 拉取仓库；仓库根目录就是插件包，不需要额外的子目录参数。
+3. 等待安装完成，确认插件列表中出现「对话颜色色点 / Color Swatch Dots」。
+4. 若页面没有自动刷新，手动刷新一次 Web UI。之后在对话里发送一条包含内联颜色代码的消息即可看到效果。
+
+GitHub 安装由本机直接访问 GitHub，不经过 npm 镜像；网络受限时请为 Git / pnpm 配置代理，或改用下方的本地目录方式。需要锁定到某个提交时，可在地址后追加 `#<commit>`：
+
+```text
+https://github.com/iKode423/dsh-color-swatch.git#<commit>
+```
+
+更新时在插件页移除旧版本后重新安装即可；Git 安装不会随仓库的新提交自动更新。
+
+### 通过本地目录安装
+
+1. 克隆仓库：
+
+   ```bash
+   git clone https://github.com/iKode423/dsh-color-swatch.git
+   ```
+
+2. 打开 Harness 的「插件」页，选择克隆下来的 `dsh-color-swatch` 目录进行安装。
+3. 确认插件列表中出现「对话颜色色点 / Color Swatch Dots」，然后刷新页面。
+
+### 手动安装（开发时常用）
 
 1. 把仓库目录 link 进当前 profile 的 `node_modules`（`pnpm link` 或 `pnpm add file:../color-swatch`）。
 2. 在 profile 的 Cordis 配置里加入上面的 `insert` 片段。
@@ -103,6 +131,7 @@ color-swatch/
 ├── client.js           # 全部实现：样式、颜色解析、色点、浮层、复制
 ├── icon.svg            # 插件列表图标
 ├── locale/{zh,en}.json # 插件元信息文案
+├── .gitignore
 ├── README.md
 └── LICENSE             # MIT
 ```
