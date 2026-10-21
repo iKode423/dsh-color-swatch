@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "对话颜色色点",
+    "description": "在对话中的 HEX、RGB、HSL 与 CSS 颜色名前显示对应颜色的圆形色点；悬停色点即可查看并复制它的 HEX、RGB、HSL 与 CSS 名称写法。"
+  }
+}

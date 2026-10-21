@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Color swatch dots">
+  <rect x="3" y="3" width="58" height="58" rx="15" fill="#20171A"/>
+  <circle cx="24" cy="25" r="11" fill="#BE8C47"/>
+  <circle cx="41" cy="25" r="11" fill="#7FB2FF"/>
+  <circle cx="32.5" cy="41" r="11" fill="#E05666"/>
+</svg>

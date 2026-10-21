@@ -1,0 +1,3 @@
+- insert:
+    - id: color-swatch
+      name: '@local/color-swatch'

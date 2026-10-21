@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Color Swatch Dots",
+    "description": "Adds a circular color dot before HEX, RGB, HSL, and CSS named colors shown in chat. Hover a dot to see and copy its HEX, RGB, HSL, and CSS name forms."
+  }
+}
